@@ -1,4 +1,4 @@
-from secret_api import owm
+from api_key import owm
 from pyowm.utils import config
 from pyowm.utils import timestamps
 
