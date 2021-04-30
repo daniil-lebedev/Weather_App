@@ -4,12 +4,12 @@ from pyowm.utils import timestamps
 
 # ---------- FREE API KEY examples ---------------------
 
-owm
+owm 
 mgr = owm.weather_manager()
 
 
 # Search for current weather in London (Great Britain) and get details
-observation = mgr.weather_at_place('London,GB')
+observation = mgr.weather_at_place('Moscow,RU')
 w = observation.weather
 
 w.detailed_status         # 'clouds'
@@ -20,7 +20,6 @@ w.rain                    # {}
 w.heat_index              # None
 w.clouds                  # 75
 
-# Will it be clear tomorrow at this time in Milan (Italy) ?
-forecast = mgr.forecast_at_place('Milan,IT', 'daily')
-answer = forecast.will_be_clear_at(timestamps.tomorrow())
+print('The weather is :',w)
+
 
