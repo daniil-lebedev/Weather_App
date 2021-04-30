@@ -2,6 +2,11 @@ from api_key import owm
 from pyowm.utils import config
 from pyowm.utils import timestamps
 
+
+#take the input from the user
+takeInput = input("Please insert the name of the city here (e.g. Moscow, RU) : ")
+
+
 # ---------- FREE API KEY examples ---------------------
 
 owm 
@@ -9,7 +14,7 @@ mgr = owm.weather_manager()
 
 
 # Search for current weather in London (Great Britain) and get details
-observation = mgr.weather_at_place('Moscow,RU')
+observation = mgr.weather_at_place(takeInput)
 w = observation.weather
 
 w.detailed_status         # 'clouds'
